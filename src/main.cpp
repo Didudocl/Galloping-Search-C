@@ -34,13 +34,13 @@ int main()
      cout << "\n"
           << endl;
 
-     vector<int> arr_sort = arr, arr_quick = arr; // Copia de array para posterior ordenamiento
+     vector<int> arr_quick = arr; // Copia de array para ordenar con quickSort()
 
      cout << "========================ORDENAMIENTO DE ARREGLO=======================" << endl;
 
      // Ordenamiento por método de librería algorithms -> sort()
      auto t5 = high_resolution_clock::now();
-     sort(arr_sort.begin(), arr_sort.end());
+     sort(arr.begin(), arr.end());
      auto t6 = high_resolution_clock::now();
      cout << "✔ Arreglo ordenado con sort() en " << duration<double, milli>(t6 - t5).count() << " milisegundos." << endl;
 
