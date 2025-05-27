@@ -4,14 +4,13 @@
 #include <random>
 #include "array_utils.h"
 
-const size_t SIZE = 5'000'000'000ULL;
 const int MIN_VALUE = 1;
 const int MAX_VALUE = 10'000'000;
 
 // Generar arreglo paralelo con OpenMP
-std::vector<int> generate_array_parallel()
+std::vector<int> generate_array_parallel(size_t size)
 {
-    std::vector<int> arr(SIZE);
+    std::vector<int> arr(size);
 
 #pragma omp parallel
     {
@@ -19,7 +18,7 @@ std::vector<int> generate_array_parallel()
         std::uniform_int_distribution<> dis(MIN_VALUE, MAX_VALUE);
 
 #pragma omp for schedule(static)
-        for (size_t i = 0; i < SIZE; ++i)
+        for (size_t i = 0; i < size; ++i)
         {
             arr[i] = dis(gen);
         }
@@ -29,13 +28,13 @@ std::vector<int> generate_array_parallel()
 }
 
 // Generar arreglo sin paralelismo
-std::vector<int> generate_array()
+std::vector<int> generate_array(size_t size)
 {
-    std::vector<int> arr(SIZE);
+    std::vector<int> arr(size);
     std::mt19937 gen(1234);
     std::uniform_int_distribution<> dis(MIN_VALUE, MAX_VALUE);
 
-    for (size_t i = 0; i < SIZE; ++i)
+    for (size_t i = 0; i < size; ++i)
     {
         arr[i] = dis(gen);
     }
@@ -53,5 +52,6 @@ std::vector<int> generate_keys(size_t count)
     {
         keys[i] = dis(gen);
     }
+
     return keys;
 }
