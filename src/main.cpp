@@ -55,7 +55,7 @@ int main()
      cout << "\n"
           << endl;
 
-     test_search_times(arr_sort);
+     test_search_times(arr);
      print_results();
 
      cout << string(95, '=') << endl;
