@@ -5,7 +5,9 @@
 
 Este código implementa y analiza el algoritmo de **Búsqueda Galopante/Exponencial** sobre un arreglo ordenado de enteros. Además, se realiza una comparación con el algoritmo de **Búsqueda Binaria**.
 
-La especificación completa del problema se encuentra en el siguiente [archivo](./docs/task.pdf).
+El enunciado completo del primer problema está disponible en el siguiente [archivo](./docs/enunciado.pdf).
+
+Las respuestas correspondientes se encuentran en el siguiente [archivo](./docs/respuestas.pdf).
 
 ## ⚙️ Instrucciones de Compilación y Ejecución
 
