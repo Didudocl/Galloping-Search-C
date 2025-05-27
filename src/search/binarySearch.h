@@ -1,9 +1,9 @@
-// search/binarySearch.h
 #ifndef BINARY_SEARCH_H
 #define BINARY_SEARCH_H
 
 #include <vector>
 
-int binarySearch(const std::vector<int> &arr, std::size_t l, std::size_t r, int x);
+int binarySearchIterative(const std::vector<int> &arr, size_t l, size_t r, int x);
+int binarySearchRecursive(const std::vector<int> &arr, int l, int r, int x);
 
 #endif

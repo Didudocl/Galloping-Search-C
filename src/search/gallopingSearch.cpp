@@ -1,13 +1,9 @@
 #include <vector>
 #include <iostream>
-#include "gallopingSearch.h"
-#include "binarySearch.h"
 #include <algorithm>
+#include "binarySearch.h"
 
-using namespace std;
-
-// Búsqueda galopante/exponencial
-int gallopingSearch(const vector<int> &arr, size_t size, int x)
+int gallopingSearch(const std::vector<int> &arr, size_t size, int x)
 {
     if (size == 0)
         return -1;
@@ -20,5 +16,5 @@ int gallopingSearch(const vector<int> &arr, size_t size, int x)
         linf *= 2;
     }
 
-    return binarySearch(arr, linf, min(2 * linf, size - 1), x);
+    return binarySearchIterative(arr, linf, std::min(2 * linf, size - 1), x);
 }

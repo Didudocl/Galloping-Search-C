@@ -1,4 +1,3 @@
-// search/gallopingSearch.h
 #ifndef GALLOPING_SEARCH_H
 #define GALLOPING_SEARCH_H
 
